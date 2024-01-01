@@ -16,6 +16,9 @@ body{
 .mode span{
     margin-right: 10px;
 }
+.bi-brightness-low-fill{
+    font-size: 25px;
+}
 .switchmode{
     --white: #282c35;
     --black: #f9f9f9;
@@ -49,6 +52,7 @@ html{
 }
 .header-center .icons span{
     margin: 10px 5px;
+    font-size: 25px;
 }
 .navbar{
     width: 100%;
@@ -102,7 +106,7 @@ nav ul li a:hover{
     padding-right: 10px;
 }
 .image-container{
-    max-width: 400px;
+    max-width: 300px;
 }
 .image-container img{
     width: 100%;
@@ -142,6 +146,7 @@ button{
     border-radius: 50%;
     display: block;
 }
+
 /*styling skills section*/
 .skills{
     display: grid;
@@ -151,7 +156,7 @@ button{
 }
 .my-skills{
     display: grid;
-    grid-template-columns: repeat(2, 100px);
+    grid-template-columns: repeat(2, 120px);
     grid-gap: 2em;
 }
 .my-skills > span{
@@ -220,13 +225,17 @@ button{
     line-height: 0;
     margin: 30px 0;
 }
+.c-h{
+    line-height: 0.17rem;
+}
 fieldset{
     border: none;
 }
 input{
     display: block;
     margin: 10px 0;
-    padding: 10px 25px;
+    padding: 10px;
+    width: 200px;
     border: none;
     border-radius: 5px;
     color: var(--black);
@@ -240,12 +249,14 @@ textarea{
     outline: var(--pink);
     border-radius: 5px;
     background-color: transparent;
-    padding: 10px 12px;
+    padding: 10px;
+    width: 200px;
 }
 input[type="submit"]{
     border: none;
     border-radius: 2px;
-    padding: 10px;
+    padding: 10px 25px;
+    width: unset;
     font-size: 12px;
     color: #fff;
     background: linear-gradient(to right, indigo, hotpink);
@@ -323,6 +334,11 @@ footer{
         top: 24px;
         font-size: 18px;
     }
+    .bi-brightness-low-fill{
+        position: absolute;
+        font-size: 25px;
+        top: -4px;
+    }
 /*styling intro section*/
 .intro{
     display: flex;
@@ -393,7 +409,7 @@ form{
 }
 input{
     width: 300px;
-    height: 30px;
+    height: 20px;
 }
 input[type="submit"]{
     width: 100px;
@@ -402,7 +418,7 @@ input[type="submit"]{
 }
 textarea{
     width: 300px;
-    padding: 5px 25px;
+    padding: 10px ;
 }
 }
 @media  (min-width:1024px) {
