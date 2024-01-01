@@ -1,3 +1,3 @@
-## FidexCode-portfolio
+## fidexCode-portfolio
 
 get ready to explore in my world.
