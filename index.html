@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/58b7424050.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <title>FidexCode Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,13 +12,13 @@
     <header id="home" id="top">
         <div class="navbar">
         <div class="header-center">
-        <div class="logo"><strong>Fidex</strong>Code</div>
+        <div class="logo">FidexCode</div>
         <div class="mode">
-            <span class="light"><i class="fa-solid fa-sun"></i></span>   
-            <span class="dark"><i class="fa-solid fa-moon"></i></span>
+            <span class="light"><i class="bi bi-brightness-low-fill"></i></span>   
+            <span class="dark"><i class="bi bi-moon-stars-fill"></i></span>
         </div>
         <div class="icons">
-            <span class="toggle-bar"><i class="fa-solid fa-bars"></i></span>
+            <span class="toggle-bar"><i class="bi bi-list"></i></span>
         </div>
         </div>
         <!--header center ends-->
@@ -37,7 +37,7 @@
         <!--navbar ends-->
         <article class="section intro">
             <div class="image-container">
-                <img src="./images/fidelis-3.png" alt="fidelis image">
+                <img src="./images/fidelis-3.png" alt="fidelis image" width="100%">
             </div>
             <div class="text-intro">
                 <h1>Hey, I'm Fidelis</h1>
@@ -45,22 +45,25 @@
                 <p>I develop clean and friendly-user websites.</p>
                 <p>Want to bring your idea into existence?</p>
                 <button>
-                    <a>Hire Me</a><i class="fa-solid fa-paper-plane"></i>
+                    <a>Hire Me</a><span class="hire"><i class="bi bi-send-fill"></i></span>
                 </button>
             </div>
         </article>
     </header>
     <main>
         <section class="section about" id="about">
-            <span class="heading">
-            <h2>About Me</h2>
-            <p>Get to know me</p>
-            </span>
+            
             <article>
-            <div class="image-container">
-                <img src="./images/fidelis-4.jpg" alt="fidelis image">
+            <div class="about-image">
+                <div class="image-container">
+                    <img src="./images/fidelis-4.jpg" alt="fidelis image">
+                </div>
             </div>
             <div class="text-about">
+                <span class="heading">
+                    <h2>About Me</h2>
+                    <p>Get to know me</p>
+                </span>
                 <p>
                     I'm a frontend developer, currently studying computer science at Ebonyi State University
                     in Nigeria. I have been learning and honing my skills in HTML, CSS, JavaScript, Bootstrap,
@@ -77,7 +80,7 @@
                     constantly strives to improve my skills.
                 </p>
                 <button>
-                    <a>Download CV <i class="fa-solid fa-download"></i></a>
+                    <a>Download CV <i class="bi bi-download"></i></a>
                 </button>
             </div>
             </article>
@@ -100,103 +103,95 @@
             </div>
         </section>
         <section class="section portfolio" id="portfolio">
-            <div class="portfolio-heading heading">
-            <h2>My Portfolio</h2>
-            <p>Awesome Projects</p>
-            </div>
-            <div class="my-portfolio">
-                <span>
-                    <h3>SHOWTIME</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-                        tenetur consequuntur aliquid. Quisquam corporis, praesentium modi
-                        culpa, at consectetur minus ducimus cupiditate nesciunt laboriosam tenetur
-                        ipsam dolores alias, rerum officia!
-                    </p>
-                    <p>HTML, Css, and JavaScript</p>
-                    <button><a>Project</a></button>
-                    <button><a>Code</a></button>
-                </span>
-                <span>
-                    <h3>Daily Task</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-                        tenetur consequuntur aliquid. Quisquam corporis, praesentium modi
-                        culpa, at consectetur minus ducimus cupiditate nesciunt laboriosam tenetur
-                        ipsam dolores alias, rerum officia!
-                    </p>
-                    <p>HTML, Css, and JavaScript</p>
-                    <button><a>Project</a></button>
-                    <button><a>Code</a></button>
-                </span>
-                <span>
-                    <h3>F.C.T</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-                        tenetur consequuntur aliquid. Quisquam corporis, praesentium modi
-                        culpa, at consectetur minus ducimus cupiditate nesciunt laboriosam tenetur
-                        ipsam dolores alias, rerum officia!
-                    </p>
-                    <p>Bootstrap and JavaScript</p>
-                    <button>Project</a></button>
-                    <button><a>Code</a></button>
-                </span>
-                <span>
-                    <h3>SHOPMORE</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-                        tenetur consequuntur aliquid. Quisquam corporis, praesentium modi
-                        culpa, at consectetur minus ducimus cupiditate nesciunt laboriosam tenetur
-                        ipsam dolores alias, rerum officia!
-                    </p>
-                    <p>Tailwind CSS and React</p>
-                    <button><a>Project</a></button>
-                    <button><a>Code</a></button>
-                </span>
-                <span>
-                    <h3>FidexCode</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-                        tenetur consequuntur aliquid. Quisquam corporis, praesentium modi
-                        culpa, at consectetur minus ducimus cupiditate nesciunt laboriosam tenetur
-                        ipsam dolores alias, rerum officia!
-                    </p>
-                    <p>HTML, Css, and JavaScript</p>
-                    <button><a>Project</a></button>
-                    <button><a>Code</a></button>
-                </span>
+            <div class="portfolio-wrap">
+                <div class="portfolio-heading heading">
+                    <h2>My Portfolio</h2>
+                    <p>Awesome Projects</p>
+                    </div>
+                    <div class="my-portfolio">
+                        
+                        <div class="tifi-tv">
+                            <div class="tifi-tv-image">
+                                <img src="./images/stage.png" alt="tifi-tv" width="100%">
+                            </div>
+                            <span>
+                                <h3>Tifi-tv</h3>
+                                <p class="tifi-text">
+                                    Converted mockup design into react application. I ensured it is
+                                    pixel perfect, responsive on different screen size and also putting web page
+                                    optmization into consideration.
+                                </p>
+                                <p>Stacks:Tailwind CSS and React.js</p>
+                                <button><a href=""> Demo project</a></button>
+                                <button><a href="">Source code</a></button>
+                            </span>
+                        </div>
+        
+                        <div class="tifi-tv">
+                            <div class="tifi-tv-image">
+                                <img src="./images/stage.png" alt="tifi-tv" width="100%">
+                            </div>
+                            <span>
+                                <h3>Tifi-tv</h3>
+                                <p class="tifi-text">
+                                    Converted mockup design into react application. I ensured it is
+                                    pixel perfect, responsive on different screen size and also putting web page
+                                    optmization into consideration.
+                                </p>
+                                <p>Stacks:Tailwind CSS and React.js</p>
+                                <button><a>Demo project</a></button>
+                                <button><a>Source code</a></button>
+                            </span>
+                        </div>
+        
+                        <div class="tifi-tv">
+                            <div class="tifi-tv-image">
+                                <img src="./images/stage.png" alt="tifi-tv" width="100%">
+                            </div>
+                            <span>
+                                <h3>Tifi-tv</h3>
+                                <p class="tifi-text">
+                                    Converted mockup design into react application. I ensured it is
+                                    pixel perfect, responsive on different screen size and also putting web page
+                                    optmization into consideration.
+                                </p>
+                                <p>Stacks:Tailwind CSS and React.js</p>
+                                <button><a>Demo project</a></button>
+                                <button><a>Source code</a></button>
+                            </span>
+                        </div>                
+                    </div>
             </div>
         </section>
         <section class="section contact-container" id="contact">
-            <span class="heading">
-                <h2>Contact Me</h2>
-                <p>Get in touch</p>    
-            </span>
             <div class="my-contact">
             <article>
                 <div class="contact-me">
+                    <span class="">
+                        <h2>Contact Me</h2>
+                        <p>Get in touch</p>    
+                    </span>
                     <span class="contact call">
                         <h4>Wish to call?</h4>
-                        <p><i class="fa-solid fa-phone icon"></i> +2348158415658</p>
+                        <p><i class="bi bi-telephone-plus-fill"></i> +2348158415658</p>
                     </span>
                     <span class="contact email">
                         <h4>Email</h4>
-                        <p><i class="fa-solid fa-envelope icon"></i> mbamfidelisobioma@gmail.com</p>
+                        <p><i class="bi bi-envelope-fill"></i> mbamfidelisobioma@gmail.com</p>
                     </span>
                     <span class="contact Location">
                         <h4>Location</h4>
-                        <p><i class="fa-solid fa-location-dot icon"></i> Remote</p>
+                        <p><i class="bi bi-geo-alt-fill"></i> Remote</p>
                     </span>
                     <span class="contact connect">
                        <h4>Let's Connect</h4>
-                       <span><i class="fa-brands fa-twitter icon"></i></span>
-                       <span><i class="fa-brands fa-linkedin icon"></i></span>
-                      <span><i class="fa-brands fa-github icon"></i></span>
+                       <span><i class="bi bi-twitter-x"></i></span>
+                       <span><i class="bi bi-linkedin"></i></span>
+                      <span><i class="bi bi-github"></i></span>
                     </span>
                 </div>
             </article>
             <article>
-                <h4>Send Me Message</h4>
                 <form method="post" action="MAILTO:mbamfidelisobioma@gmail.com" enctype="multipart/form-data">
                     <fieldset>
                         <label for="user-name"><input type="text" name="user-name" id="user-name" placeholder="Your Full Name" required></label>
@@ -214,13 +209,13 @@
     <footer>
         <div class="right">
             <p>&copy;FidexCode All right reserved.</p>
-            <span><i class="fa-brands fa-twitter"></i></span>
-            <span><i class="fa-brands fa-linkedin"></i></span>
-            <span><i class="fa-brands fa-github"></i></span>
+            <span><i class="bi bi-twitter-x"></i></span>
+            <span><i class="bi bi-linkedin"></i></span>
+            <span><i class="bi bi-github"></i></span>
         </div>
     </footer>
-   <div class="scroll-top">
-    <a href="#top" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></a>
+   <div class="scroll-container">
+    <a href="#top" class="scroll-top"><i class="bi bi-arrow-up"></i></a>
     </div>
     </div>
     <script src="app.js"></script>

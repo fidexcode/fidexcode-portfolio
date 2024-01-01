@@ -3,6 +3,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
     color: var(--black);
     background-color: var(--white);
 }
@@ -41,13 +42,10 @@ html{
     margin: 10px;
     font-size: 25px;
     font-weight: bold;
-    font-family: "Segio Ui";
-    font-style: italic;
     flex: 1;
-}
-.logo strong{
-    font-size: 25px;
-    color: var(--green);
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right, indigo, hotpink);
 }
 .header-center .icons span{
     margin: 10px 5px;
@@ -56,6 +54,7 @@ html{
     width: 100%;
     overflow: hidden;
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     background-color: var(--white);
@@ -85,7 +84,7 @@ nav ul li a{
     font-size: 15px;
 }
 nav ul li a:hover{
-    color: var(--green);
+    color: hotpink;
 }
 .navbar span{
     font-size: 16px;
@@ -101,28 +100,32 @@ nav ul li a:hover{
 .intro{
     padding-left: 10px;
     padding-right: 10px;
-    /*color: #fff;*/
-   /* background-color: #2a2a2a;*/
 }
 .image-container{
-    width: 200px;
+    max-width: 400px;
 }
 .image-container img{
     width: 100%;
     height: auto;
 }
 .job{
-    color: var(--green);
     font-weight: bold;
     font-size: 15px;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right, indigo, hotpink);
 }
 button{
     border: none;
-    padding: 5px 10px;
-    border-radius: 2px;
-    background-color: var(--green);
+    padding: 10px 20px;
+    border-radius: 5px;
     color: #fff;
     font-size: 12px;
+    cursor: pointer;
+    background: linear-gradient(to right, indigo, hotpink);
+}
+.hire{
+    transform: rotate(90deg);
 }
 /*styling about section*/
 .about{
@@ -137,6 +140,7 @@ button{
 }
 .about .image-container img{
     border-radius: 50%;
+    display: block;
 }
 /*styling skills section*/
 .skills{
@@ -152,12 +156,13 @@ button{
 }
 .my-skills > span{
     padding: 10px;
-    border: 1px solid var(--green);
+    border: 1px solid hotpink;
 }
 /*styling portfolio section*/
-.portfolio{
+.portfolio-wrap{
     display: grid;
-    justify-items: center;
+    justify-content: center;
+    align-items: start;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -166,11 +171,44 @@ button{
     grid-template-columns: 1fr;
     grid-gap: 2em;
 }
-.my-portfolio > span{
-    border: 1px solid var(--green);
-    padding: 15px;
-    border-radius: 10px;
+.my-portfolio > div{
     max-width: 300px;
+    border-radius: 10px;
+    border: 1px solid pink;
+}
+.tifi-tv{
+    position: relative;
+    padding: 15px;
+    height:200px;
+    overflow: hidden;
+    display: grid;
+    color: #fff;
+}
+.tifi-tv-image img{
+    height: 300px;
+    object-fit: cover;
+}
+.tifi-tv-image{
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.tifi-tv::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.tifi-tv button{
+    margin-right: 15px;
+}
+.tifi-tv button a{
+    text-decoration: none;
+    color: #fff;
 }
 /*styling contact section*/
 .contact-container{
@@ -180,7 +218,6 @@ button{
  .contact{
     display: block;
     line-height: 0;
-    font-size: 10px;
     margin: 30px 0;
 }
 fieldset{
@@ -189,27 +226,39 @@ fieldset{
 input{
     display: block;
     margin: 10px 0;
-    padding: 5px 25px;
-    border: 2px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
     color: var(--black);
-    border: 1px solid var(--green);
+    border: 1px solid hotpink;
     outline: var(--pink);
     background-color: transparent;
 }
 textarea{
-    border: 1px solid var(--green);
+    border: 1px solid hotpink;
     color: var(--black);
     outline: var(--pink);
-    border-radius: 2px;
+    border-radius: 5px;
     background-color: transparent;
+    padding: 10px 12px;
 }
 input[type="submit"]{
     border: none;
     border-radius: 2px;
-    padding: 5px 10px;
+    padding: 10px;
     font-size: 12px;
     color: #fff;
-    background-color: var(--green);
+    background: linear-gradient(to right, indigo, hotpink);
+}
+.connect .bi{
+    margin-right: 10px;
+}
+.contact .bi{
+    color: hotpink;
+    font-size: 12px;
+}
+.fa-brands{
+    margin-left: 5px;
 }
 /*styling footer*/
 footer{
@@ -219,41 +268,47 @@ footer{
     width: 100%;
     height: 150px;
     color: #fff;
-    background-color: var(--green);
+    background-color: gray;
 }
- .icon{
-    color: var(--green);
-    font-size: 12px;
-}
-.fa-brands{
-    margin-left: 5px;
-}
-.scroll-top{
+ 
+.scroll-container{
+    display: grid;
+    place-items: center;
     position: fixed;
     bottom: 10px;
     right: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    background-color:#fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
 }
 .scroll-top a{
     font-size: 18px;
-    border-radius: 50%;
-    padding: 5px 10px;
+    font-weight: bold;
     position: absolute;
-    color: #00a16c;
-    background-color:#fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-@media (min-width:768px){
+.bi-arrow-up{
+    color: hotpink;
+}
+.right .bi{
+    color: #fff;
+}
+@media (min-width: 768px){
     .navbar{
         width: 100%;
         overflow: hidden;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        box-shadow: 0 3px 0px 0 rgba(0, 0, 0.7, 0.1);
+    }
+    .logo{
+        margin-right: 3px;
     }
     .nav-wrap{
         height: auto;
-        margin: 0 auto 
+        margin-right: 100px;
     }
     .toggle-bar{
         display: none;
@@ -262,26 +317,27 @@ footer{
         display: inline-block;
         margin: 0 20px 0 20px;
     }
-.header-center .icons{
-    position: absolute;
-    right: 30px;
-}
-.mode span{
-    position: absolute;
-    right: 30px;
-    top: 24px;
-    font-size: 18px;
-}
+    .mode span{
+        position: absolute;
+        right: 60px;
+        top: 24px;
+        font-size: 18px;
+    }
 /*styling intro section*/
 .intro{
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    gap: 150px;
 }
 .image-container{
-    width: 30%;
+    max-width: 400px;
+}
+.text-intro{
+    font-size: 16px;
+}
+.section{
+    padding-top: 150px;
 }
 /*styling about section*/
 .about article{
@@ -290,14 +346,22 @@ footer{
     align-items: flex-start;
     gap: 30px;
 }
+.text-about .heading{
+    text-align: left;
+}
 .about .text-about{
-    width: 50%;
+    max-width: 400px;
 }
 .about .image-container{
     margin: unset;
 }
 .about .image-container img{
     border-radius: unset;
+}
+.about-image{
+    background-color: white;
+    padding: 2px;
+    background: linear-gradient(to right, indigo, hotpink);
 }
 /*styling skills section*/
 .my-skills{
@@ -306,13 +370,48 @@ footer{
 }
 /*styling portfolio section*/
 .my-portfolio{
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 /*styling contact section*/
 .my-contact{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 30px;
 }
+.contact{
+    font-size: 12px;
+}
+.contact .bi{
+    font-size: 16px;
+}
+.fa-brands{
+    margin-left: 5px;
+}
+form{
+    margin-top: 50px;
+}
+input{
+    width: 300px;
+    height: 30px;
+}
+input[type="submit"]{
+    width: 100px;
+    height: 30px;
+    margin: 10px auto;
+}
+textarea{
+    width: 300px;
+    padding: 5px 25px;
+}
+}
+@media  (min-width:1024px) {
+    .mode span{
+        position: absolute;
+        right: 320px;
+    }
+    /*styling portfolio section*/
+    .my-portfolio{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
